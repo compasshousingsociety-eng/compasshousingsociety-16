@@ -80,7 +80,7 @@ document.getElementById("site-footer").innerHTML = `
         <ul class="space-y-2 text-sm opacity-80">
           <li><a href="index.html" class="hover:text-[#4ADE80]">Home 1</a></li>
           <li><a href="home2.html" class="hover:text-[#4ADE80]">Home 2</a></li>
-          <li><a href="propertydetails.html" class="hover:text-[#4ADE80]">Property Details</a></li>
+          <li><a href="servicesDetails.html" class="hover:text-[#4ADE80]">Services Details</a></li>
           <li><a href="comingsoon.html" class="hover:text-[#4ADE80]">Featured Properties</a></li>
         </ul>
       </div>
@@ -98,7 +98,7 @@ document.getElementById("site-footer").innerHTML = `
         <h4 class="font-semibold mb-3">Properties</h4>
         <ul class="space-y-2 text-sm opacity-80">
           <li><a href="contact.html" class="hover:text-[#4ADE80]">Contact</a></li>
-          <li><a href="propertydetails.html" class="hover:text-[#4ADE80]">Single Property</a></li>
+          <li><a href="servicesDetails.html" class="hover:text-[#4ADE80]">Services Details</a></li>
         </ul>
       </div>
 

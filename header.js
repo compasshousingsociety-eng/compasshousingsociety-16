@@ -19,9 +19,11 @@ const header = `
 
       <a href="index.html" class="hover:text-[#00C29A] nav-link" data-page="home">Home 1</a>
       <a href="home2.html" class="hover:text-[#00C29A] nav-link" data-page="home2">Home 2</a>
-      <a href="blog.html" class="hover:text-[#00C29A] nav-link" data-page="blog">Blog</a>
-      <a href="blog-details.html" class="hover:text-[#00C29A] nav-link" data-page="blog-details">Blog Details</a>
+
       <a href="aboutus.html" class="hover:text-[#00C29A] nav-link" data-page="about">About Us</a>
+         <a href="services.html" class="block py-2 nav-link hover:text-[#00C29A]" data-page="services">Services</a>
+         <a href="servicesDetails.html" class="block py-2 nav-link hover:text-[#00C29A]" data-page="services-details">Services Details</a>
+
 
       <!-- MORE DROPDOWN -->
       <div class="relative">
@@ -30,8 +32,9 @@ const header = `
         </button>
 
 <div id="moreMenu" class="absolute bg-white dark:bg-[#0A0A0A] shadow-lg rounded-lg p-3 w-48 mt-2 z-50 hidden">
-          <a href="listing.html" class="block py-2 hover:text-[#00C29A]">Listings</a>
-          <a href="propertydetails.html" class="block py-2 hover:text-[#00C29A]">Property Details</a>
+       
+      <a href="blog.html" class="hover:text-[#00C29A] nav-link" data-page="blog">Blog</a>
+      <a href="blog-details.html" class="hover:text-[#00C29A] nav-link" data-page="blog-details">Blog Details</a>
           <a href="contact.html" class="block py-2 hover:text-[#00C29A]">Contact</a>
           <a href="404.html" class="block py-2 hover:text-[#00C29A]">404 Page</a>
           <a href="comingsoon.html" class="block py-2 hover:text-[#00C29A]">Coming Soon</a>
@@ -64,13 +67,13 @@ const header = `
     <a href="blog-details.html" class="block py-2 border-b nav-link" data-page="blog-details">Blog Details</a>
     <a href="aboutus.html" class="block py-2 border-b nav-link" data-page="about">About Us</a>
 
-    <a href="listing.html" class="block py-2 border-b nav-link">Listings</a>
-    <a href="propertydetails.html" class="block py-2 border-b nav-link">Property Details</a>
-    <a href="contact.html" class="block py-2 border-b nav-link">Contact</a>
-    <a href="404.html" class="block py-2 border-b nav-link">404 Page</a>
-    <a href="comingsoon.html" class="block py-2 border-b nav-link">Coming Soon</a>
-    <a href="signup.html" class="block py-2 border-b nav-link">Signup</a>
-    <a href="login.html" class="block py-2 border-b nav-link">Login</a>
+    <a href="services.html" class="block py-2 border-b nav-link" data-page="services">Services</a>
+    <a href="servicesDetails.html" class="block py-2 border-b nav-link" data-page="servicesDetails">Services Details</a>
+    <a href="contact.html" class="block py-2 border-b nav-link" data-page="contact">Contact</a>
+    <a href="404.html" class="block py-2 border-b nav-link" data-page="404">404 Page</a>
+    <a href="comingsoon.html" class="block py-2 border-b nav-link" data-page="comingsoon">Coming Soon</a>
+    <a href="signup.html" class="block py-2 border-b nav-link" data-page="signup">Signup</a>
+    <a href="login.html" class="block py-2 border-b nav-link" data-page="login">Login</a>
 
     <!-- MOBILE THEME TOGGLE -->
     <button id="mobileThemeToggle" class="w-full py-3 rounded-lg border flex items-center justify-center">
