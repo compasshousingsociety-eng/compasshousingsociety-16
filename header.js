@@ -40,10 +40,10 @@ const header = `
 
     </nav>
 
-    <!-- RIGHT BUTTONS (DESKTOP) -->
+    <!-- RIGHT BUTTONS (DESKTOP) --> 
     <div class="hidden md:flex items-center gap-4 font-medium">
-          <a href="signup.html" class="hover:text-[#00C29A] nav-link" data-page="home2">Sign Up</a>
-      <a href="404.html" class="hover:text-[#00C29A] nav-link" data-page="home2">Login</a>
+          <a href="signup.html" class="hover:text-[#00C29A] nav-link" data-page="signup">Sign Up</a>
+      <a href="404.html" class="hover:text-[#00C29A] nav-link" data-page="notfound">Login</a>
 
       <!-- THEME ICON -->
       <button id="themeToggle" class="w-10 h-10 flex items-center justify-center rounded-full border">
@@ -64,13 +64,13 @@ const header = `
     <a href="blog-details.html" class="block py-2 border-b nav-link" data-page="blog-details">Blog Details</a>
     <a href="aboutus.html" class="block py-2 border-b nav-link" data-page="about">About Us</a>
 
-    <a href="listing.html" class="block py-2 border-b">Listings</a>
-    <a href="propertydetails.html" class="block py-2 border-b">Property Details</a>
-    <a href="contact.html" class="block py-2 border-b">Contact</a>
-    <a href="404.html" class="block py-2 border-b">404 Page</a>
-    <a href="comingsoon.html" class="block py-2 border-b">Coming Soon</a>
-    <a href="signup.html" class="block py-2 border-b">Signup</a>
-    <a href="login.html" class="block py-2 border-b">Login</a>
+    <a href="listing.html" class="block py-2 border-b nav-link">Listings</a>
+    <a href="propertydetails.html" class="block py-2 border-b nav-link">Property Details</a>
+    <a href="contact.html" class="block py-2 border-b nav-link">Contact</a>
+    <a href="404.html" class="block py-2 border-b nav-link">404 Page</a>
+    <a href="comingsoon.html" class="block py-2 border-b nav-link">Coming Soon</a>
+    <a href="signup.html" class="block py-2 border-b nav-link">Signup</a>
+    <a href="login.html" class="block py-2 border-b nav-link">Login</a>
 
     <!-- MOBILE THEME TOGGLE -->
     <button id="mobileThemeToggle" class="w-full py-3 rounded-lg border flex items-center justify-center">
