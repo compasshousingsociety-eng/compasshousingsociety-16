@@ -6,7 +6,7 @@ document.head.appendChild(faCDN);
 
 
 document.getElementById("site-footer").innerHTML = `
-<footer class="w-full bg-[#0E1C1F] text-white pt-16 pb-10">
+<footer class="w-full bg-[#0E1C1F] text-white pt-16 pb-10 px-14">
 
   <!-- TOP SUBSCRIBE SECTION -->
   <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between gap-10">

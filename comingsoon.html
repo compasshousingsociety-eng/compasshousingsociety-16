@@ -72,12 +72,20 @@
 
     <!-- Subscription -->
     <div class="mt-12 flex bg-white dark:bg-[#0A0A0A] rounded-full overflow-hidden shadow max-w-md w-full">
-      <input type="email" class="px-4 py-3 w-full bg-transparent outline-none"
+      <input id="SubscribeBtnEmail" type="email" class="px-4 py-3 w-full bg-transparent outline-none"
              placeholder="Enter your email to get notified" />
-      <button class="px-6 py-3 bg-[#00C29A] text-white font-semibold">
+      <button id="SubscribeBtn" class="px-6 py-3 bg-[#00C29A] text-white font-semibold">
         Notify Me
       </button>
     </div>
+<!-- 
+      <div class="flex bg-white rounded-full overflow-hidden max-w-sm">
+        <input id="footerEmail" type="email" placeholder="Enter your email"
+          class="px-4 py-2 w-full outline-none text-black">
+        <button id="footerSubscribeBtn" class="px-5 py-2 bg-[#4ADE80] text-black font-medium">
+          Subscribe
+        </button>
+      </div> -->
 
     <!-- Social Icons -->
     <div class="flex gap-6 text-2xl mt-10 opacity-80">
@@ -97,7 +105,7 @@
 
   <!-- COUNTDOWN LOGIC -->
   <script>
-    const target = new Date("2025-12-31T00:00:00").getTime();
+    const target = new Date("2026-12-31T00:00:00").getTime();
 
     setInterval(() => {
       const now = new Date().getTime();
@@ -108,6 +116,36 @@
       document.getElementById("minutes").innerText = Math.floor((diff / (1000 * 60)) % 60);
       document.getElementById("seconds").innerText = Math.floor((diff / 1000) % 60);
     }, 1000);
+
+
+    
+  </script>
+  <script>
+    document.addEventListener("click", (e) => {
+  if (e.target.id === "SubscribeBtn") {
+    const emailInput = document.getElementById("SubscribeBtnEmail");
+    const email = emailInput.value.trim();
+
+    if (email === "") {
+      alert("Please fill the email field");
+      emailInput.focus();
+      return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address");
+      emailInput.focus();
+      return;
+    }
+
+    alert("Subscribed successfully!");
+
+    // emailInput.value = "";
+
+
+  }
+});
   </script>
 
 </body>

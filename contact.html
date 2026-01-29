@@ -109,28 +109,37 @@
       <form class="space-y-6">
 
         <!-- NAME -->
-        <div>
-          <label class="text-sm font-medium">Full Name</label>
-          <input type="text"
-                 class="w-full mt-1 px-4 py-3 border rounded-lg bg-transparent
-                        border-gray-300 dark:border-gray-700" />
-        </div>
+     <div>
+  <label class="text-sm font-medium">Full Name <span class="text-red-500">*</span></label>
+  <input id="fullName" type="text"
+    class="w-full mt-1 px-4 py-3 border rounded-lg bg-transparent border-gray-300 dark:border-gray-700" />
+  <p id="nameError" class="text-red-500 text-sm mt-1 hidden">
+    ⚠️ Name is required.
+  </p>
+</div>
+
 
         <!-- EMAIL -->
-        <div>
-          <label class="text-sm font-medium">Email Address</label>
-          <input type="email"
-                 class="w-full mt-1 px-4 py-3 border rounded-lg bg-transparent
-                        border-gray-300 dark:border-gray-700" />
-        </div>
+      <div>
+  <label class="text-sm font-medium">Email Address <span class="text-red-500">*</span></label>
+  <input id="email" type="email"
+    class="w-full mt-1 px-4 py-3 border rounded-lg bg-transparent border-gray-300 dark:border-gray-700" />
+  <p id="emailError" class="text-red-500 text-sm mt-1 hidden">
+    ⚠️ Email is required.
+  </p>
+</div>
+
 
         <!-- MESSAGE -->
         <div>
-          <label class="text-sm font-medium">Message</label>
-          <textarea rows="5"
-                    class="w-full mt-1 px-4 py-3 border rounded-lg bg-transparent
-                           border-gray-300 dark:border-gray-700"></textarea>
-        </div>
+  <label class="text-sm font-medium">Message <span class="text-red-500">*</span></label>
+  <textarea id="message" rows="5"
+    class="w-full mt-1 px-4 py-3 border rounded-lg bg-transparent border-gray-300 dark:border-gray-700"></textarea>
+  <p id="msgError" class="text-red-500 text-sm mt-1 hidden">
+    ⚠️ Message is required.
+  </p>
+</div>
+
 
         <button type="submit"
                 class="w-full py-3 bg-[#00C29A] text-white rounded-lg font-semibold">
@@ -158,6 +167,70 @@
   <!-- FOOTER -->
   <div id="site-footer"></div>
   <script src="footer.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("form");
+
+    const fullName = document.getElementById("fullName");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const msgError = document.getElementById("msgError");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let valid = true;
+
+      // NAME
+      if (fullName.value.trim() === "") {
+        fullName.classList.add("border-red-500");
+        nameError.classList.remove("hidden");
+        valid = false;
+      } else {
+        fullName.classList.remove("border-red-500");
+        nameError.classList.add("hidden");
+      }
+
+      // EMAIL
+      if (email.value.trim() === "") {
+        email.classList.add("border-red-500");
+        emailError.textContent = "⚠️ Email is required.";
+        emailError.classList.remove("hidden");
+        valid = false;
+      } else {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value.trim())) {
+          email.classList.add("border-red-500");
+          emailError.textContent = "⚠️ Enter a valid email.";
+          emailError.classList.remove("hidden");
+          valid = false;
+        } else {
+          email.classList.remove("border-red-500");
+          emailError.classList.add("hidden");
+        }
+      }
+
+      // MESSAGE
+      if (message.value.trim() === "") {
+        message.classList.add("border-red-500");
+        msgError.classList.remove("hidden");
+        valid = false;
+      } else {
+        message.classList.remove("border-red-500");
+        msgError.classList.add("hidden");
+      }
+
+      if (valid) {
+        alert("Message sent successfully!");
+        form.reset();
+      }
+    });
+  });
+</script>
+
 
 </body>
 </html>

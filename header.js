@@ -41,9 +41,10 @@ const header = `
     </nav>
 
     <!-- RIGHT BUTTONS (DESKTOP) -->
-    <div class="hidden md:flex items-center gap-4">
-      <a href="signup.html" class=" block py-2 hover:text-[#00C29A]">Sign Up</a>
-   <a href="404.html" class=" block py-2 hover:text-[#00C29A]">Login</a>
+    <div class="hidden md:flex items-center gap-4 font-medium">
+          <a href="signup.html" class="hover:text-[#00C29A] nav-link" data-page="home2">Sign Up</a>
+      <a href="404.html" class="hover:text-[#00C29A] nav-link" data-page="home2">Login</a>
+
       <!-- THEME ICON -->
       <button id="themeToggle" class="w-10 h-10 flex items-center justify-center rounded-full border">
         <span id="themeIcon">🌙</span>
