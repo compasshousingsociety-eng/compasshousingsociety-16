@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <script src="https://cdn.tailwindcss.com"></script>
    <title>Compass Housing Template</title>
+       <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
     <style>
       body::before {
       content: "";
@@ -20,6 +25,10 @@
       pointer-events: none;
       z-index: -1;
     }
+       section {
+    padding-top:50px !important;
+    padding-bottom:50px !important;
+  }
   </style>
 </head>
 

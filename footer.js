@@ -129,18 +129,29 @@ document.getElementById("site-footer").innerHTML = `
 
 </footer>
 `;
-
-// Subscribe Redirect Logic
 document.addEventListener("click", (e) => {
   if (e.target.id === "footerSubscribeBtn") {
-    const email = document.getElementById("footerEmail").value.trim();
+    const emailInput = document.getElementById("footerEmail");
+    const email = emailInput.value.trim();
 
     if (email === "") {
-      alert("Please enter your email");
+      alert("Please fill the email field");
+      emailInput.focus();
       return;
     }
 
-    // Redirect anywhere you want:
-    window.location.href = "signup.html"; 
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address");
+      emailInput.focus();
+      return;
+    }
+
+    alert("Subscribed successfully!");
+
+    emailInput.value = "";
+
+
   }
 });
+
