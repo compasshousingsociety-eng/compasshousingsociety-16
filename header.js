@@ -22,17 +22,17 @@ const header = `
 
           <a href="aboutus.html" class="hover:text-[#00C29A] nav-link" data-page="about">About Us</a>
 
-          <a href="contact.html" class="block py-2 hover:text-[#00C29A]" data-page="contact">Contact Us</a>
+          <a href="contact.html" class="block py-2 nav-link hover:text-[#00C29A]" data-page="contact">Contact Us</a>
 
 
       <!-- MORE DROPDOWN -->
     
          <div class="relative">
-            <button id="moreBtnServices" class="hover:text-[#00C29A] flex items-center gap-1">
+            <button id="moreBtnServices" class="hover:text-[#00C29A] nav-link flex items-center gap-1">
               Services ▼
             </button>
 
-            <div id="moreMenuServices" class="absolute bg-white dark:bg-[#0A0A0A] shadow-lg rounded-lg p-3 w-48 mt-2 z-50 hidden">
+            <div id="moreMenuServices" class="absolute  bg-white dark:bg-[#0A0A0A] shadow-lg rounded-lg p-3 w-48 mt-2 z-50 hidden">
             <a href="services.html" class="block py-2 nav-link hover:text-[#00C29A]" data-page="services">Services</a>
             <a href="servicesDetails.html" class="block py-2 nav-link hover:text-[#00C29A]" data-page="services-details">Services Details</a>
             </div>
@@ -40,7 +40,7 @@ const header = `
 
 
           <div class="relative">
-            <button id="moreBtnBlogs" class="hover:text-[#00C29A] flex items-center gap-1">
+            <button id="moreBtnBlogs" class="hover:text-[#00C29A] nav-link flex items-center gap-1">
               Blogs ▼
             </button>
 
@@ -53,7 +53,7 @@ const header = `
 
 
           <div class="relative">
-            <button id="moreBtn" class="hover:text-[#00C29A] flex items-center gap-1">
+            <button id="moreBtn" class=" hover:text-[#00C29A] nav-link flex items-center gap-1">
               More ▼
             </button>
 
