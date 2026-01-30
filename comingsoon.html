@@ -78,16 +78,6 @@
         Notify Me
       </button>
     </div>
-<!-- 
-      <div class="flex bg-white rounded-full overflow-hidden max-w-sm">
-        <input id="footerEmail" type="email" placeholder="Enter your email"
-          class="px-4 py-2 w-full outline-none text-black">
-        <button id="footerSubscribeBtn" class="px-5 py-2 bg-[#4ADE80] text-black font-medium">
-          Subscribe
-        </button>
-      </div> -->
-
-    <!-- Social Icons -->
     <div class="flex gap-6 text-2xl mt-10 opacity-80">
       <a href="#" class="hover:text-[#00C29A]"><i class="fab fa-facebook"></i></a>
       <a href="#" class="hover:text-[#00C29A]"><i class="fab fa-instagram"></i></a>
@@ -121,7 +111,8 @@
     
   </script>
   <script>
-    document.addEventListener("click", (e) => {
+
+document.addEventListener("click", (e) => {
   if (e.target.id === "SubscribeBtn") {
     const emailInput = document.getElementById("SubscribeBtnEmail");
     const email = emailInput.value.trim();
@@ -141,11 +132,14 @@
 
     alert("Subscribed successfully!");
 
-    // emailInput.value = "";
-
-
+    // Clear the field
+    emailInput.value = "";
   }
 });
+document.getElementById("SubscribeBtnEmail").addEventListener("input", (e) => {
+  e.target.value = e.target.value.replace(/^\s+/, "");
+});
+
   </script>
 
 </body>

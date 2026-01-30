@@ -167,8 +167,25 @@
   <!-- FOOTER -->
   <div id="site-footer"></div>
   <script src="footer.js"></script>
+<script>
+document.querySelectorAll("input, textarea").forEach(field => {
+  // Prevent typing space as first character
+  field.addEventListener("keydown", (e) => {
+    if (e.key === " " && field.value.length === 0) {
+      e.preventDefault();
+    }
+  });
+
+  // Remove leading spaces if user pastes
+  field.addEventListener("input", () => {
+    field.value = field.value.replace(/^\s+/, "");
+  });
+});
+</script>
 
   <script>
+
+
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
 

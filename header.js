@@ -20,25 +20,47 @@ const header = `
       <a href="index.html" class="hover:text-[#00C29A] nav-link" data-page="home">Home 1</a>
       <a href="home2.html" class="hover:text-[#00C29A] nav-link" data-page="home2">Home 2</a>
 
-      <a href="aboutus.html" class="hover:text-[#00C29A] nav-link" data-page="about">About Us</a>
-         <a href="services.html" class="block py-2 nav-link hover:text-[#00C29A]" data-page="services">Services</a>
-         <a href="servicesDetails.html" class="block py-2 nav-link hover:text-[#00C29A]" data-page="services-details">Services Details</a>
+          <a href="aboutus.html" class="hover:text-[#00C29A] nav-link" data-page="about">About Us</a>
+
+          <a href="contact.html" class="block py-2 hover:text-[#00C29A]" data-page="contact">Contact Us</a>
 
 
       <!-- MORE DROPDOWN -->
-      <div class="relative">
-<button id="moreBtn" class="hover:text-[#00C29A] flex items-center gap-1">
-          More ▼
-        </button>
+    
+         <div class="relative">
+            <button id="moreBtnServices" class="hover:text-[#00C29A] flex items-center gap-1">
+              Services ▼
+            </button>
 
-<div id="moreMenu" class="absolute bg-white dark:bg-[#0A0A0A] shadow-lg rounded-lg p-3 w-48 mt-2 z-50 hidden">
-       
-      <a href="blog.html" class="hover:text-[#00C29A] nav-link" data-page="blog">Blog</a>
-      <a href="blog-details.html" class="hover:text-[#00C29A] nav-link" data-page="blog-details">Blog Details</a>
-          <a href="contact.html" class="block py-2 hover:text-[#00C29A]">Contact</a>
-          <a href="404.html" class="block py-2 hover:text-[#00C29A]">404 Page</a>
-          <a href="comingsoon.html" class="block py-2 hover:text-[#00C29A]">Coming Soon</a>
+            <div id="moreMenuServices" class="absolute bg-white dark:bg-[#0A0A0A] shadow-lg rounded-lg p-3 w-48 mt-2 z-50 hidden">
+            <a href="services.html" class="block py-2 nav-link hover:text-[#00C29A]" data-page="services">Services</a>
+            <a href="servicesDetails.html" class="block py-2 nav-link hover:text-[#00C29A]" data-page="services-details">Services Details</a>
+            </div>
         </div>
+
+
+          <div class="relative">
+            <button id="moreBtnBlogs" class="hover:text-[#00C29A] flex items-center gap-1">
+              Blogs ▼
+            </button>
+
+            <div id="moreMenuBlogs" class="absolute bg-white dark:bg-[#0A0A0A] shadow-lg rounded-lg p-3 w-48 mt-2 z-50 hidden">
+              <a href="blog.html" class=" block py-2 hover:text-[#00C29A] nav-link" data-page="blog">Blog</a>
+              <a href="blog-details.html" class=" block py-2 hover:text-[#00C29A] nav-link" data-page="blog-details">Blog Details</a>
+            </div>
+          </div>
+
+
+
+          <div class="relative">
+            <button id="moreBtn" class="hover:text-[#00C29A] flex items-center gap-1">
+              More ▼
+            </button>
+
+            <div id="moreMenu" class="absolute bg-white dark:bg-[#0A0A0A] shadow-lg rounded-lg p-3 w-48 mt-2 z-50 hidden">
+              <a href="404.html" class="block py-2 hover:text-[#00C29A]" data-page="404">404 Page</a>
+              <a href="comingsoon.html" class="block py-2 hover:text-[#00C29A]" data-page="comingsoon">Coming Soon</a>
+            </div>
       </div>
 
     </nav>
@@ -118,29 +140,7 @@ if (mobileThemeToggle) mobileThemeToggle.addEventListener("click", toggleTheme);
 
 
 
-
-
-
-
-
-// ================= THEME LOGIC =================
-// function applyTheme() {
-//   const dark = localStorage.theme === "dark";
-//   document.documentElement.classList.toggle("dark", dark);
-
-//   document.getElementById("themeIcon").textContent = dark ? "☀️" : "🌙";
-//   document.getElementById("mobileThemeIcon").textContent = dark ? "☀️" : "🌙";
-// }
-// applyTheme();
-
-// document.addEventListener("click", (e) => {
-//   if (e.target.id === "themeToggle" || e.target.id === "mobileThemeToggle") {
-//     const isDark = document.documentElement.classList.toggle("dark");
-//     localStorage.theme = isDark ? "dark" : "light";
-
-//     applyTheme();
-//   }
-// });
+// Mobile Menu Toggle
 
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -159,15 +159,43 @@ document.querySelectorAll(".nav-link").forEach((l) => {
     l.classList.add("text-[#00C29A]", "font-semibold");
   }
 });
+
+
 const moreBtn = document.getElementById("moreBtn");
 const moreMenu = document.getElementById("moreMenu");
+const moreBtnServices = document.getElementById("moreBtnServices");
+const moreMenuServices = document.getElementById("moreMenuServices");
+const moreBtnBlogs = document.getElementById("moreBtnBlogs");
+const moreMenuBlogs = document.getElementById("moreMenuBlogs");
 
 moreBtn.addEventListener("click", (e) => {
   e.stopPropagation();
   moreMenu.classList.toggle("hidden");
+
+   moreMenuServices.classList.add("hidden");
+   moreMenuBlogs.classList.add("hidden");
 });
+
+moreBtnServices.addEventListener("click", (e) => {
+  e.stopPropagation();
+  moreMenuServices.classList.toggle("hidden");
+
+  moreMenuBlogs.classList.add("hidden");
+  moreMenu.classList.add("hidden");
+});
+
+moreBtnBlogs.addEventListener("click", (e) => {
+  e.stopPropagation();
+  moreMenuBlogs.classList.toggle("hidden");
+
+   moreMenuServices.classList.add("hidden");
+   moreMenu.classList.add("hidden");
+});
+
 
 document.addEventListener("click", () => {
   moreMenu.classList.add("hidden");
+  moreMenuServices.classList.add("hidden");
+  moreMenuBlogs.classList.add("hidden");
 });
 
