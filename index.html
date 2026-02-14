@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <title>Compass Housing Template</title>
+  <style>
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      margin: auto;
+      background-image: url("Images/transparent-logo-1.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 600px auto;
+      opacity: 0.10;
+      pointer-events: none;
+      z-index: -1;
+    } 
+     section {
+    padding-top:35px !important;
+    /* padding-bottom:50px !important; */
+  }
+  </style>
+</head>
+
+<body data-page="home" class="bg-white text-[#0D0F0E] dark:bg-[#0D0F0E] dark:text-white transition">
+
+  <!-- GLOBAL HEADER -->
+  <div id="site-header"></div>
+  <script src="header.js"></script>
+
+  <!-- ============================= -->
+  <!-- HERO SECTION -->
+  <!-- ============================= -->
+  <section class="relative w-full overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1500&q=80"
+      class="w-full h-[650px] object-cover dark:opacity-70" />
+
+    <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
+      <div class="px-8 md:px-16 lg:px-28">
+        <!-- <p class="text-[#00C29A] text-lg font-semibold mb-2">Let’s find your space</p> -->
+        <h1 class="text-white text-5xl md:text-6xl font-bold max-w-lg leading-tight">
+          Futuristic Haven
+        </h1>
+
+        <div class="mt-6 flex gap-4">
+          <a href="home2.html">
+            <button class="px-6 py-3 bg-[#00C29A] text-white rounded-xl font-medium">Get a Home</button>
+          </a>
+          <a href="servicesDetails.html">
+            <button class="px-6 py-3 bg-white text-[#0D0F0E] rounded-xl font-medium dark:bg-white/20 dark:text-white">
+              Explore
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar Floating -->
+  <div
+    class="relative z-10 -mt-14 mx-auto max-w-5xl bg-white dark:bg-[#0A0A0A] shadow-xl rounded-2xl p-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div>
+      <h4 class="text-2xl font-semibold">$4,760,000</h4>
+      <p class="text-gray-600 dark:text-gray-300">Avg. Property Price</p>
+    </div>
+    <div>
+      <h4 class="text-2xl font-semibold">380+</h4>
+      <p class="text-gray-600 dark:text-gray-300">Luxury Homes</p>
+    </div>
+    <div>
+      <h4 class="text-2xl font-semibold">120</h4>
+      <p class="text-gray-600 dark:text-gray-300">Agents</p>
+    </div>
+    <div>
+      <h4 class="text-2xl font-semibold">98%</h4>
+      <p class="text-gray-600 dark:text-gray-300">Client Satisfaction</p>
+    </div>
+  </div>
+
+  <!-- ============================= -->
+  <!-- FEATURED SECTION -->
+  <!-- ============================= -->
+  <section class=" px-8 md:px-16 lg:px-28">
+    <!-- <p class="text-[#00C29A] font-medium mb-3">Top Listings</p> -->
+    <h2 class="text-3xl md:text-4xl font-bold mb-10 max-w-2xl">
+      Explore best properties with expert services.
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-10">
+      <div>
+        <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=900&q=80"
+          class="rounded-2xl w-full h-[340px] object-cover" />
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=1500&q=80"
+          class="rounded-xl w-full h-[150px] object-cover" />
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1500&q=80"
+          class="rounded-xl w-full h-[150px] object-cover" />
+        <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=1500&q=80"
+          class="rounded-xl w-full h-[150px] object-cover" />
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1500&q=80"
+          class="rounded-xl w-full h-[150px] object-cover" />
+      </div>
+    </div>
+
+    <a href="services.html">
+      <button class="mt-8 px-6 py-3 bg-[#00C29A] text-white rounded-xl">View Services </button>
+    </a>
+  </section>
+
+  <!-- ============================= -->
+  <!-- GRID LISTINGS SECTION -->
+  <!-- ============================= -->
+  <section class="py-20 px-8 md:px-16 lg:px-28">
+    <!-- <p class="text-[#00C29A] font-medium mb-3">Trending</p> -->
+    <h2 class="text-3xl md:text-4xl font-bold mb-10">
+      Discover inspiring designed homes.
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <!-- Card -->
+      <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-3">
+        <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format"
+          class="rounded-xl h-[200px] w-full object-cover" />
+        <div class="mt-4">
+          <h4 class="font-semibold text-lg">Modern Glass Villa</h4>
+          <p class="text-gray-500 dark:text-gray-300">Los Angeles</p>
+          <p class="mt-2 font-bold">$980,000</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-3">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1500&q=80"
+          class="rounded-xl h-[200px] w-full object-cover" />
+        <div class="mt-4">
+          <h4 class="font-semibold text-lg">Luxury Smart Home</h4>
+          <p class="text-gray-500 dark:text-gray-300">New York</p>
+          <p class="mt-2 font-bold">$1,420,000</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-3">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format"
+          class="rounded-xl h-[200px] w-full object-cover" />
+        <div class="mt-4">
+          <h4 class="font-semibold text-lg">Coastal Glass Villa</h4>
+          <p class="text-gray-500 dark:text-gray-300">Miami</p>
+          <p class="mt-2 font-bold">$1,650,000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- TESTIMONIAL SECTION -->
+  <!-- ============================= -->
+  <section class="py-20 px-8 md:px-16 lg:px-28 bg-[#0D0F0E] text-white dark:bg-black">
+    <!-- <p class="text-[#00C29A] font-medium mb-3">Testimonials</p> -->
+    <h2 class="text-3xl md:text-4xl font-bold">What our clients say</h2>
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <p class="leading-relaxed text-gray-200 text-lg">
+        “I found my ideal home in no time! The listings were detailed, photos accurate,
+        and the whole process felt seamless. Customer service was exceptional,
+        answering all my questions. Will definitely use this platform again!”
+        “The experience was incredibly smooth from start to finish. I loved how easy it was to filter properties based
+        on my needs, and the information provided was clear and trustworthy. The support team was friendly and
+        responsive, making the entire journey stress-free.
+        Highly recommended for anyone looking for their perfect home!”
+      </p>
+
+      <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=1500&q=80"
+        class="rounded-2xl w-full h-[350px] object-cover" />
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- INSIGHTS SECTION -->
+  <!-- ============================= -->
+  <section class="py-20 px-8 md:px-16 lg:px-28">
+    <!-- <p class="text-[#00C29A] font-medium mb-3">Blog</p> -->
+    <h2 class="text-3xl md:text-4xl font-bold mb-10">Real estate insights</h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1500&q=80"
+        class="rounded-2xl w-full h-[230px] object-cover" />
+
+      <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format"
+        class="rounded-2xl w-full h-[230px] object-cover" />
+
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1500&q=80"
+        class="rounded-2xl w-full h-[230px] object-cover" />
+    </div>
+
+    <a href="blog-details.html">
+      <button class="mt-8 px-6 py-3 bg-[#00C29A] text-white rounded-xl">
+        View all articles
+      </button>
+    </a>
+  </section>
+
+  <!-- ============================= -->
+  <!-- CTA SECTION -->
+  <!-- ============================= -->
+  <section class="py-20 px-8 md:px-16 lg:px-28">
+    <div class="rounded-2xl overflow-hidden shadow-xl relative">
+      <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format"
+        class="w-full h-[380px] object-cover dark:opacity-70" />
+      <div class="absolute inset-0 bg-black/50 flex flex-col justify-center px-10">
+        <h2 class="text-white text-4xl font-bold mb-4">Where exquisite design and timeless luxury come together.</h2>
+        <a href="contact.html">
+          <button class="px-6 py-3 bg-[#00C29A] text-white rounded-xl w-fit">Join now</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- FAQ SECTION -->
+  <!-- ============================= -->
+  
+
+  <!-- GLOBAL FOOTER -->
+  <div id="site-footer"></div>
+  <script src="footer.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    .error-text { 
+      font-size: 13px; 
+      color: #ff4b4b; 
+      margin-top: 4px; 
+      display: flex; 
+      align-items: center; 
+      gap: 4px;
+    }
+    .success-popup {
+      background: #00C29A;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-weight: 600;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .required-star {
+      color: #ff4b4b;
+      margin-left: 2px;
+    }
+    .password-toggle {
+      cursor: pointer;
+      user-select: none;
+      transition: opacity 0.2s;
+    }
+    .password-toggle:hover {
+      opacity: 0.8;
+    }
+  </style>
+   <title>Compass Housing Template</title>
+    <style>
+      body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      margin: auto;
+      background-image: url("Images/transparent-logo-1.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 600px auto;
+      opacity: 0.10;
+      pointer-events: none;
+      z-index: -1;
+    }
+       section {
+    padding-top:50px !important;
+    padding-bottom:50px !important;
+  }
+  </style>
+</head>
+
+<body class="bg-white dark:bg-[#0D0F0E] text-[#0D0F0E] dark:text-white" data-page="signup">
+
+<!-- SUCCESS POPUP -->
+<div id="successPopup" class="success-popup">Account created successfully!</div>
+
+<!-- HEADER -->
+<div id="site-header"></div>
+<script src="header.js"></script>
+
+<div class="h-28"></div>
+
+<!-- ========================================================= -->
+<!-- MODERN SIGNUP SECTION -->
+<!-- ========================================================= -->
+<section class="min-h-[80vh] flex items-center justify-center px-4 mb-20" > <!-- Added mb-20 here -->
+
+  <div class="w-full max-w-xl bg-white dark:bg-[#0A0A0A] rounded-2xl shadow-2xl p-10 relative">
+
+    <!-- PAGE TITLE -->
+    <h1 class="text-3xl font-bold text-center mb-2">Create an account</h1>
+    <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
+      Join Futuristic Haven and explore luxury properties.
+    </p>
+
+    <!-- FORM -->
+    <form id="signupForm" class="space-y-6">
+
+      <!-- NAME FIELD -->
+      <div class="relative">
+        <label class="text-sm font-medium">Full Name<span class="required-star">*</span></label>
+        <input id="name" type="text"
+          class="w-full mt-1 px-4 py-3 rounded-xl border bg-transparent
+                 border-gray-300 dark:border-gray-700 focus:ring-2 
+                 focus:ring-[#00C29A] outline-none"
+          placeholder="Enter your full name">
+        <p id="nameError" class="error-text hidden"></p>
+      </div>
+
+      <!-- EMAIL FIELD -->
+      <div>
+        <label class="text-sm font-medium">Email Address<span class="required-star">*</span></label>
+        <input id="email" type="email"
+          class="w-full mt-1 px-4 py-3 rounded-xl border bg-transparent
+                 border-gray-300 dark:border-gray-700 focus:ring-2 
+                 focus:ring-[#00C29A] outline-none"
+          placeholder="Enter your email">
+        <p id="emailError" class="error-text hidden"></p>
+      </div>
+
+      <!-- PASSWORD FIELD -->
+      <div class="relative">
+        <label class="text-sm font-medium">Password<span class="required-star">*</span></label>
+        <div class="relative">
+          <input id="password" type="password"
+            class="w-full mt-1 px-4 py-3 rounded-xl border bg-transparent
+                   border-gray-300 dark:border-gray-700 focus:ring-2 
+                   focus:ring-[#00C29A] outline-none pr-12"
+            placeholder="Create a password (no spaces)">
+          
+          <!-- SHOW / HIDE Toggle -->
+          <button type="button" id="togglePass"
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-300 password-toggle">
+            <span id="eyeIcon">👁️</span>
+          </button>
+        </div>
+        <p id="passwordError" class="error-text hidden"></p>
+      </div>
+
+      <!-- CONFIRM PASSWORD -->
+      <div class="relative">
+        <label class="text-sm font-medium">Confirm Password<span class="required-star">*</span></label>
+        <div class="relative">
+          <input id="confirmPassword" type="password"
+            class="w-full mt-1 px-4 py-3 rounded-xl border bg-transparent
+                   border-gray-300 dark:border-gray-700 focus:ring-2 
+                   focus:ring-[#00C29A] outline-none pr-12"
+            placeholder="Confirm your password (no spaces)">
+          
+          <!-- SHOW / HIDE Toggle for confirm password -->
+          <button type="button" id="toggleConfirmPass"
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-300 password-toggle">
+            <span id="confirmEyeIcon">👁️</span>
+          </button>
+        </div>
+        <p id="confirmPasswordError" class="error-text hidden"></p>
+      </div>
+
+      <!-- SUBMIT BUTTON -->
+      <button type="submit"
+        class="w-full py-3 bg-[#00C29A] text-white rounded-xl font-semibold text-lg shadow-lg hover:bg-[#00b58d] transition">
+        Create Account
+      </button>
+
+    </form>
+
+    <!-- FOOTER TEXT -->
+    <p class="text-center text-sm mt-6">
+      Already have an account?
+      <a href="404.html" class="text-[#00C29A] font-semibold">Log in</a>
+    </p>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div id="site-footer"></div>
+<script src="footer.js"></script>
+
+<!-- ========================================================= -->
+<!-- VALIDATION SCRIPT -->
+<!-- ========================================================= -->
+<script>
+  const form = document.getElementById("signupForm");
+  const popup = document.getElementById("successPopup");
+  
+  // Track password visibility state
+  let isPasswordVisible = false;
+  let isConfirmPasswordVisible = false;
+
+  function showError(id, message) {
+    const el = document.getElementById(id);
+    el.innerHTML = "⚠️ " + message;
+    el.classList.remove("hidden");
+  }
+  
+  function hideError(id) {
+    const el = document.getElementById(id);
+    el.innerHTML = "";
+    el.classList.add("hidden");
+  }
+
+  // Function to remove leading/trailing spaces
+  function trimSpaces(value) {
+    return value.replace(/\s+/g, ' ').trim();
+  }
+
+  // Function to check if value contains only spaces
+  function isEmptyOrSpaces(value) {
+    return value.trim().length === 0;
+  }
+
+  // Function to check if password contains ANY spaces
+  function hasSpaces(value) {
+    return /\s/.test(value);
+  }
+
+  // SHOW/HIDE PASSWORD TOGGLE
+  document.getElementById("togglePass").addEventListener("click", () => {
+    const pass = document.getElementById("password");
+    const eyeIcon = document.getElementById("eyeIcon");
+    
+    if (pass.type === "password") {
+      pass.type = "text";
+      eyeIcon.textContent = "🙈";
+      isPasswordVisible = true;
+    } else {
+      pass.type = "password";
+      eyeIcon.textContent = "👁️";
+      isPasswordVisible = false;
+    }
+  });
+
+  // SHOW/HIDE CONFIRM PASSWORD TOGGLE
+  document.getElementById("toggleConfirmPass").addEventListener("click", () => {
+    const confirmPass = document.getElementById("confirmPassword");
+    const confirmEyeIcon = document.getElementById("confirmEyeIcon");
+    
+    if (confirmPass.type === "password") {
+      confirmPass.type = "text";
+      confirmEyeIcon.textContent = "🙈";
+      isConfirmPasswordVisible = true;
+    } else {
+      confirmPass.type = "password";
+      confirmEyeIcon.textContent = "👁️";
+      isConfirmPasswordVisible = false;
+    }
+  });
+
+  // Real-time validation for empty spaces
+  document.getElementById("name").addEventListener("input", function() {
+    this.value = trimSpaces(this.value);
+  });
+
+  document.getElementById("email").addEventListener("input", function() {
+    this.value = trimSpaces(this.value);
+  });
+
+  // Real-time validation for password - prevent spaces
+  document.getElementById("password").addEventListener("input", function() {
+    // Remove any spaces from password
+    if (hasSpaces(this.value)) {
+      this.value = this.value.replace(/\s/g, '');
+      showError("passwordError", "Spaces are not allowed in password.");
+      setTimeout(() => {
+        if (!hasSpaces(this.value)) {
+          hideError("passwordError");
+        }
+      }, 1500);
+    }
+    
+    // Check if confirm password matches
+    const confirm = document.getElementById("confirmPassword").value;
+    if (confirm && confirm !== this.value) {
+      showError("confirmPasswordError", "Passwords do not match.");
+    } else if (confirm && confirm === this.value) {
+      hideError("confirmPasswordError");
+    }
+  });
+
+  // Real-time validation for confirm password - prevent spaces
+  document.getElementById("confirmPassword").addEventListener("input", function() {
+    // Remove any spaces from confirm password
+    if (hasSpaces(this.value)) {
+      this.value = this.value.replace(/\s/g, '');
+      showError("confirmPasswordError", "Spaces are not allowed in password.");
+      setTimeout(() => {
+        if (!hasSpaces(this.value)) {
+          hideError("confirmPasswordError");
+        }
+      }, 1500);
+    }
+    
+    const pass = document.getElementById("password").value;
+    if (this.value && this.value !== pass) {
+      showError("confirmPasswordError", "Passwords do not match.");
+    } else if (this.value && this.value === pass) {
+      hideError("confirmPasswordError");
+    }
+  });
+
+  // Prevent pasting spaces into password fields
+  document.getElementById("password").addEventListener("paste", function(e) {
+    e.preventDefault();
+    const pastedText = (e.clipboardData || window.clipboardData).getData('text');
+    // Remove spaces from pasted text
+    const cleanedText = pastedText.replace(/\s/g, '');
+    document.execCommand('insertText', false, cleanedText);
+  });
+
+  document.getElementById("confirmPassword").addEventListener("paste", function(e) {
+    e.preventDefault();
+    const pastedText = (e.clipboardData || window.clipboardData).getData('text');
+    // Remove spaces from pasted text
+    const cleanedText = pastedText.replace(/\s/g, '');
+    document.execCommand('insertText', false, cleanedText);
+  });
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+
+    let error = false;
+
+    // Get and trim values
+    const name = trimSpaces(document.getElementById("name").value);
+    const email = trimSpaces(document.getElementById("email").value);
+    const pass = document.getElementById("password").value;
+    const confirm = document.getElementById("confirmPassword").value;
+
+    // VALIDATIONS
+
+    // Name validation
+    if (isEmptyOrSpaces(name)) {
+      showError("nameError", "Name is required.");
+      error = true;
+    } else if (name.length < 3) {
+      showError("nameError", "Name must be at least 3 characters.");
+      error = true;
+    } else {
+      hideError("nameError");
+    }
+
+    // Email validation
+    if (isEmptyOrSpaces(email)) {
+      showError("emailError", "Email is required.");
+      error = true;
+    } else {
+      // const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net)$/;
+      if (!emailReg.test(email)) {
+        showError("emailError", "Invalid email format.");
+        error = true;
+      } else {
+        hideError("emailError");
+      }
+    }
+
+    // Password validation
+    if (!pass) {
+      showError("passwordError", "Password is required.");
+      error = true;
+    } else if (hasSpaces(pass)) {
+      showError("passwordError", "Password should not contain spaces.");
+      error = true;
+    } else {
+      const passReg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+      if (!passReg.test(pass)) {
+        showError("passwordError", "Must contain 1 uppercase, 1 lowercase, 1 number, 6+ chars.");
+        error = true;
+      } else {
+        hideError("passwordError");
+      }
+    }
+
+    // Confirm password validation
+    if (!confirm) {
+      showError("confirmPasswordError", "Please confirm your password.");
+      error = true;
+    } else if (hasSpaces(confirm)) {
+      showError("confirmPasswordError", "Password should not contain spaces.");
+      error = true;
+    } else if (confirm !== pass) {
+      showError("confirmPasswordError", "Passwords do not match.");
+      error = true;
+    } else {
+      hideError("confirmPasswordError");
+    }
+
+    // SUCCESS 
+    if (!error) {
+      popup.style.display = "block";
+      setTimeout(() => popup.style.display = "none", 3000);
+      form.reset();
+      
+      // Reset eye icons to default state
+      document.getElementById("eyeIcon").textContent = "👁️";
+      document.getElementById("confirmEyeIcon").textContent = "👁️";
+      isPasswordVisible = false;
+      isConfirmPasswordVisible = false;
+    }
+  });
+
+  // Add focus event listeners to clear errors when user starts typing
+  const inputs = document.querySelectorAll('input');
+  inputs.forEach(input => {
+    input.addEventListener('focus', function() {
+      const id = this.id;
+      if (id === 'name') hideError('nameError');
+      if (id === 'email') hideError('emailError');
+      if (id === 'password') hideError('passwordError');
+      if (id === 'confirmPassword') hideError('confirmPasswordError');
+    });
+    
+    // Prevent space key in password fields
+    if (input.id === 'password' || input.id === 'confirmPassword') {
+      input.addEventListener('keydown', function(e) {
+        if (e.key === ' ') {
+          e.preventDefault();
+          showError(input.id === 'password' ? 'passwordError' : 'confirmPasswordError', 
+                   "Spaces are not allowed in password.");
+          setTimeout(() => {
+            if (!hasSpaces(this.value)) {
+              hideError(input.id === 'password' ? 'passwordError' : 'confirmPasswordError');
+            }
+          }, 1500);
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

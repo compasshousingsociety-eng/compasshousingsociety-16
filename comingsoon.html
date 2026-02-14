@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon – Futuristic Haven</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = { darkMode: "class" };
+  </script>
+
+  <!-- ICONS -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+        <style>
+             section {
+    padding-top:50px !important;
+    padding-bottom:50px !important;
+  }
+        </style>
+</head>
+
+<body data-page="comingsoon"
+      class="bg-white text-[#0D0F0E] dark:bg-[#0D0F0E] dark:text-white transition min-h-screen">
+
+  <!-- GLOBAL HEADER -->
+  <div id="site-header"></div>
+  <script src="header.js"></script>
+
+
+
+  <!-- ========================================================= -->
+  <!-- COMING SOON SECTION -->
+  <!-- ========================================================= -->
+  <section class="flex flex-col items-center text-center px-6 py-20 mt-16">
+
+    <!-- Coming Soon Image -->
+
+
+
+    <!-- <p class="text-[#00C29A] font-medium text-sm mt-10">Coming Soon</p> -->
+
+    <h1 class="text-4xl md:text-6xl font-bold">
+      A New Experience is on the Way
+    </h1>
+
+    <p class="text-gray-600 dark:text-gray-300 max-w-xl text-sm mt-4">
+      Our team is working behind the scenes to bring you something modern,
+      powerful and beautifully designed. Stay tuned!
+    </p>
+
+    <!-- Countdown Timer -->
+    <div id="countdown" class="grid grid-cols-4 gap-6 mt-8 text-center">
+      <div>
+        <h2 class="text-4xl font-bold" id="days">00</h2>
+        <p class="text-sm opacity-70">Days</p>
+      </div>
+      <div>
+        <h2 class="text-4xl font-bold" id="hours">00</h2>
+        <p class="text-sm opacity-70">Hours</p>
+      </div>
+      <div>
+        <h2 class="text-4xl font-bold" id="minutes">00</h2>
+        <p class="text-sm opacity-70">Minutes</p>
+      </div>
+      <div>
+        <h2 class="text-4xl font-bold" id="seconds">00</h2>
+        <p class="text-sm opacity-70">Seconds</p>
+      </div>
+    </div>
+
+    <!-- Subscription -->
+    <div class="mt-12 flex bg-white dark:bg-[#0A0A0A] rounded-full overflow-hidden shadow max-w-md w-full">
+      <input id="SubscribeBtnEmail" type="email" class="px-4 py-3 w-full bg-transparent outline-none"
+             placeholder="Enter your email to get notified" />
+      <button id="SubscribeBtn" class="px-6 py-3 bg-[#00C29A] text-white font-semibold">
+        Notify Me
+      </button>
+    </div>
+    <div class="flex gap-6 text-2xl mt-10 opacity-80">
+  <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer" class="hover:text-[#00C29A]">
+    <i class="fab fa-facebook"></i>
+  </a>
+
+  <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" class="hover:text-[#00C29A]">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer" class="hover:text-[#00C29A]">
+    <i class="fab fa-linkedin"></i>
+  </a>
+
+  <a href="https://www.youtube.com/@yourchannel" target="_blank" rel="noopener noreferrer" class="hover:text-[#00C29A]">
+    <i class="fab fa-youtube"></i>
+  </a>
+</div>
+
+
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================= -->
+  <div id="site-footer"></div>
+  <script src="footer.js"></script>
+
+  <!-- COUNTDOWN LOGIC -->
+  <script>
+    const target = new Date("2026-12-31T00:00:00").getTime();
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = target - now;
+
+      document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+      document.getElementById("hours").innerText = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      document.getElementById("minutes").innerText = Math.floor((diff / (1000 * 60)) % 60);
+      document.getElementById("seconds").innerText = Math.floor((diff / 1000) % 60);
+    }, 1000);
+
+
+    
+  </script>
+  <script>
+
+document.addEventListener("click", (e) => {
+  if (e.target.id === "SubscribeBtn") {
+    const emailInput = document.getElementById("SubscribeBtnEmail");
+    const email = emailInput.value.trim();
+
+    if (email === "") {
+      alert("Please fill the email field");
+      emailInput.focus();
+      return;
+    }
+
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net)$/;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address");
+      emailInput.focus();
+      return;
+    }
+
+    alert("Subscribed successfully!");
+
+    // Clear the field
+    emailInput.value = "";
+  }
+});
+document.getElementById("SubscribeBtnEmail").addEventListener("input", (e) => {
+  e.target.value = e.target.value.replace(/^\s+/, "");
+});
+
+  </script>
+
+</body>
+</html>

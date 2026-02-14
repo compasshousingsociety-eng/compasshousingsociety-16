@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: "class" };
+  </script>
+   <title>Compass Housing Template</title>
+    <style>
+      body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      margin: auto;
+      background-image: url("Images/transparent-logo-1.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 600px auto;
+      opacity: 0.10;
+      pointer-events: none;
+      z-index: -1;
+    }
+       section {
+    padding-top:35px !important;
+    /* padding-bottom:50px !important; */
+  }
+  </style>
+</head>
+
+<body data-page="blog"
+      class="bg-white text-[#0D0F0E] dark:bg-[#0D0F0E] dark:text-white transition">
+
+  <!-- HEADER -->
+  <div id="site-header"></div>
+  <script src="header.js"></script>
+
+  <!-- SPACE -->
+  <div class="h-28"></div>
+
+  <!-- ========================================================= -->
+  <!-- PAGE HEADER -->
+  <!-- ========================================================= -->
+  <section class="text-center">
+    <!-- <p class="text-[#00C29A] font-semibold text-sm mb-2">Blog</p> -->
+
+    <h1 class="text-4xl md:text-5xl font-bold mb-3">Real Estate Insights</h1>
+
+    <p class="text-gray-600 dark:text-gray-300 max-w-xl mx-auto text-sm">
+      Stay updated with trends, tips, guides, and the latest insights on the luxury real-estate market.
+    </p>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- FEATURED ARTICLE -->
+  <!-- ========================================================= -->
+  <section class="container mx-auto px-6 md:px-12 lg:px-20 pb-6">
+
+    <div class="bg-white dark:bg-[#0A0A0A] rounded-2xl shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+
+      <img
+        src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1600&q=80"
+        class="w-full h-[300px] lg:h-full object-cover"
+      />
+
+      <div class="p-8 flex flex-col justify-center">
+        <!-- <span class="text-[#00C29A] font-medium text-sm">Featured Article</span> -->
+
+        <h2 class="text-2xl md:text-3xl font-bold mt-2">
+          How architecture influences luxury lifestyle
+        </h2>
+
+        <p class="text-gray-600 dark:text-gray-300 text-sm mt-4">
+          Explore how modern design, minimalism, and luxurious elements shape today’s premium homes.
+          Learn how architecture impacts lifestyle, comfort, and property value.
+        </p>
+
+        <a href="blog-details.html"
+           class="mt-6 px-6 py-3 bg-[#00C29A] text-white rounded-xl font-medium w-fit">
+          Read more
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- BLOG GRID -->
+  <!-- ========================================================= -->
+  <section class="container mx-auto px-6 md:px-12 lg:px-20 pb-24">
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+
+      <!-- CARD 1 -->
+      <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-3">
+        <img
+          src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=900&q=80"
+          class="rounded-lg w-full h-[200px] object-cover"
+        />
+        <div class="mt-4">
+          <h1 class="text-[#00C29A]  font-medium">Architecture</h1>
+          <h3 class="font-semibold  mt-1">Top 5 luxury villa designs in 2025</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+            Discover the latest architectural styles dominating the luxury home market.
+          </p>
+          <a href="blog-details.html"
+             class="text-[#00C29A] text-sm font-semibold mt-3 inline-block">Read more →</a>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-3">
+        <img
+          src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=900&q=80"
+          class="rounded-lg w-full h-[200px] object-cover"
+        />
+        <div class="mt-4">
+          <h1 class="text-[#00C29A]  font-medium">Home Buying</h1>
+          <h3 class="font-semibold  mt-1">How to choose the right property</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+            A step-by-step guide to selecting a perfect home based on needs, budget & future value.
+          </p>
+          <a href="blog-details.html"
+             class="text-[#00C29A] text-sm font-semibold mt-3 inline-block">Read more →</a>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-3">
+        <img
+          src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=900&q=80"
+          class="rounded-lg w-full h-[200px] object-cover"
+        />
+        <div class="mt-4">
+          <h1 class="text-[#00C29A]  font-medium">Interior</h1>
+          <h3 class="font-semibold  mt-1">Modern interior trends in luxury homes</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+            Minimalistic decor, premium finishes & elegant interior trends.
+          </p>
+          <a href="blog-details.html"
+             class="text-[#00C29A] text-sm font-semibold mt-3 inline-block">Read more →</a>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-3">
+        <img
+          src="https://images.unsplash.com/photo-1502673530728-f79b4cab31b1?auto=format&fit=crop&w=900&q=80"
+          class="rounded-lg w-full h-[200px] object-cover"
+        />
+        <div class="mt-4">
+          <h1 class="text-[#00C29A]  font-medium">Market</h1>
+          <h3 class="font-semibold  mt-1">Luxury property market forecast</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+            Experts discuss rising market trends & premium home demand for next year.
+          </p>
+          <a href="blog-details.html"
+             class="text-[#00C29A] text-sm font-semibold mt-3 inline-block">Read more →</a>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-3">
+        <img
+          src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=900&q=80"
+          class="rounded-lg w-full h-[200px] object-cover"
+        />
+        <div class="mt-4">
+          <h1 class="text-[#00C29A]  font-medium">Lifestyle</h1>
+          <h3 class="font-semibold  mt-1">Benefits of living near the coastline</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+            Why coastal homes offer unmatched lifestyle, comfort & investment value.
+          </p>
+          <a href="blog-details.html"
+             class="text-[#00C29A] text-sm font-semibold mt-3 inline-block">Read more →</a>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-3">
+        <img
+          src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=900&q=80"
+          class="rounded-lg w-full h-[200px] object-cover"
+        />
+        <div class="mt-4">
+          <h1 class="text-[#00C29A]  font-medium">Home Care</h1>
+          <h3 class="font-semibold  mt-1">How to maintain a luxury villa</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+            Tips to preserve beauty, efficiency, and long-term value of premium villas.
+          </p>
+          <a href="blog-details.html"
+             class="text-[#00C29A] text-sm font-semibold mt-3 inline-block">Read more →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="site-footer"></div>
+  <script src="footer.js"></script>
+
+</body>
+</html>

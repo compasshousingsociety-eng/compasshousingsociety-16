@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: "class" };
+  </script>
+  <title>Compass Housing Template</title>
+  <style>
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      margin: auto;
+      background-image: url("Images/transparent-logo-1.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 600px auto;
+      opacity: 0.10;
+      pointer-events: none;
+      z-index: -1;
+    }
+       section {
+    padding-top:50px !important;
+    padding-bottom:50px !important;
+  }
+  
+  </style>
+</head>
+
+<body data-page="blog-details" class="bg-white text-[#0D0F0E] dark:bg-[#0D0F0E] dark:text-white transition">
+
+  <!-- HEADER -->
+  <div id="site-header"></div>
+  <script src="header.js"></script>
+
+  <!-- SPACER -->
+  <div class="h-28"></div>
+
+  <!-- ========================================================= -->
+  <!-- FEATURED BANNER -->
+  <!-- ========================================================= -->
+  <section class="container mx-auto px-6 md:px-12 lg:px-20">
+<div class="flex items-center flex-col">
+<!-- <h1 class="text-[#00C29A] font-semibold text-3xl md:text-4xl mb-3">Architecture</h1> -->
+
+    <h2 class=" flex items-center text-3xl md:text-4xl font-bold leading-tight">
+      How architecture influences luxury lifestyle
+    </h2>
+
+    <div class="mt-4 text-gray-600 dark:text-gray-300 text-sm flex gap-4">
+      <span>March 12, 2025</span>
+      <span>•</span>
+      <span>By Emily Johnson</span>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1592595896551-12b371d546d5?auto=format&fit=crop&w=1600&q=80"
+      class="w-full h-[380px] md:h-[480px] rounded-2xl mt-8 object-cover shadow-lg" />
+
+</div>
+    
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- CONTENT + SIDEBAR -->
+  <!-- ========================================================= -->
+  <section class="container mx-auto px-6 md:px-12 lg:px-20 py-16 grid grid-cols-1 lg:grid-cols-3 gap-14">
+
+    <!-- MAIN ARTICLE -->
+    <div class="lg:col-span-2 text-gray-700 dark:text-gray-300 leading-relaxed">
+
+      <p class="text-lg">
+        Luxury architecture has transformed the way people experience living spaces.
+        With thoughtful design, premium materials, and innovative layouts,
+        modern luxury homes deliver unmatched comfort, style, and functionality.
+      </p>
+
+      <h2 class="mt-10 mb-4 text-2xl font-semibold">Modern minimalist approach</h2>
+      <p>
+        Minimalism continues to dominate luxury design. Clean lines, neutral tones,
+        and open spaces create a sense of harmony and sophistication.
+        Large glass windows allow natural light to become a core design element.
+      </p>
+
+      <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?auto=format&fit=crop&w=1200&q=80"
+        class="w-full rounded-xl h-[300px] md:h-[360px] object-cover shadow" />
+
+
+  
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="space-y-10">
+
+      <!-- RECENT POSTS -->
+      <div>
+        <h3 class="font-semibold text-xl mb-4">Recent posts</h3>
+
+        <div class="space-y-6 text-sm">
+
+          <a href="#" class="block">
+            <div class="flex gap-4">
+              <img
+                src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/real-estate-instagram-post-design-template-938f0d706cf45f90011cae5296d0cb9e_screen.jpg?ts=1711173875"
+                class="w-20 h-16 rounded object-cover" />
+              <div>
+                <h4 class="font-semibold">Top 5 luxury villa designs in 2025</h4>
+                <p class="text-gray-500 dark:text-gray-300 text-xs">Mar 10, 2025</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="block">
+            <div class="flex gap-4">
+              <img
+                src="https://cdn.dribbble.com/userupload/4259580/file/original-bec5fe526ece9cc2aea94b57505ea6f8.jpg?crop=52x39-1548x1161&format=webp&resize=400x300&vertical=center"
+                class="w-20 h-16 rounded object-cover" />
+              <div>
+                <h4 class="font-semibold">Luxury market forecast for next year</h4>
+                <p class="text-gray-500 dark:text-gray-300 text-xs">Mar 5, 2025</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="block">
+            <div class="flex gap-4">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfMdf7dqfjQTld_2_OA23tQSszouneUs4fJQ&s"
+                class="w-20 h-16 rounded object-cover" />
+              <div>
+                <h4 class="font-semibold">Interior trends shaping modern homes</h4>
+                <p class="text-gray-500 dark:text-gray-300 text-xs">Feb 22, 2025</p>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- NEWSLETTER -->
+      <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-6">
+        <h3 class="font-semibold text-xl">Subscribe for updates</h3>
+
+        <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+          Get the latest real estate insights directly in your inbox.
+        </p>
+
+        <input id="subscribeEmail" type="email" placeholder="Enter your email"
+          class="mt-4 w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent" />
+
+        <button id="subscribeBtn" class="mt-4 w-full py-3 bg-[#00C29A] text-white rounded-lg font-semibold">
+          Subscribe
+        </button>
+      </div>
+
+
+    </aside>
+
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- RELATED POSTS -->
+  <!-- ========================================================= -->
+  <section class="container mx-auto px-6 md:px-12 lg:px-20">
+
+    <h2 class="text-2xl font-semibold mb-4">Related articles</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-3">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1000&q=80"
+          class="w-full h-[180px] object-cover rounded-lg" />
+        <div class="mt-4">
+          <h4 class="font-semibold text-lg">Choosing the right property in 2025</h4>
+          <a class="text-[#00C29A] text-sm mt-2 inline-block" href="#">Read more →</a>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-3">
+        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1000&q=80"
+          class="w-full h-[180px] object-cover rounded-lg" />
+        <div class="mt-4">
+          <h4 class="font-semibold text-lg">Why coastal homes are rising in value</h4>
+          <a class="text-[#00C29A] text-sm mt-2 inline-block" href="#">Read more →</a>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-3">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=900&q=80"
+          class="w-full h-[180px] object-cover rounded-lg" />
+        <div class="mt-4">
+          <h4 class="font-semibold text-lg">Maintaining a luxury villa</h4>
+          <a class="text-[#00C29A] text-sm mt-2 inline-block" href="#">Read more →</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="footer.js"></script>
+
+  <script>
+    document.getElementById("subscribeBtn").addEventListener("click", function () {
+      const emailInput = document.getElementById("subscribeEmail");
+      const email = emailInput.value.trim();
+
+      if (email === "") {
+        alert("Please enter your email address");
+        emailInput.focus();
+        return;
+      }
+
+      // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net)$/;
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address");
+        emailInput.focus();
+        return;
+      }
+
+      alert("Subscription successful! 🎉");
+
+      emailInput.value = "";
+    });
+  </script>
+
+</body>
+
+</html>

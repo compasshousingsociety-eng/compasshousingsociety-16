@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+   <title>Compass Housing Template</title>
+       <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+    <style>
+      body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      margin: auto;
+      background-image: url("Images/transparent-logo-1.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 600px auto;
+      opacity: 0.10;
+      pointer-events: none;
+      z-index: -1;
+    }
+       section {
+    padding-top:50px !important;
+    padding-bottom:50px !important;
+  }
+  </style>
+</head>
+
+<body data-page="notfound"
+      class="bg-white text-[#0D0F0E] dark:bg-[#0D0F0E] dark:text-white transition">
+
+  <!-- HEADER -->
+  <div id="site-header"></div>
+  <script src="header.js"></script>
+
+  <!-- SPACER -->
+  <div class="h-28"></div>
+
+  <!-- ========================================================= -->
+  <!-- 404 SECTION -->
+  <!-- ========================================================= -->
+  <section class="container mx-auto px-6 md:px-12 lg:px-20 py-24 text-center">
+
+    <!-- 404 Text -->
+    <h1 class="text-6xl md:text-7xl font-extrabold mt-10">404</h1>
+
+    <p class="text-xl text-[#00C29A] font-semibold mt-2">
+      Page Not Found
+    </p>
+
+    <p class="max-w-lg mx-auto text-gray-600 dark:text-gray-300 mt-4">
+      The page you are trying to reach doesn’t exist or has been moved.  
+      Please check the URL or return to the homepage.
+    </p>
+
+    <a href="index.html"
+       class="mt-8 inline-block px-8 py-3 bg-[#00C29A] text-white rounded-xl font-medium hover:bg-[#00b58d] transition">
+      Back to Home
+    </a>
+
+  </section>
+
+  <!-- FOOTER -->
+  <div id="site-footer"></div>
+  <script src="footer.js"></script>
+
+</body>
+</html>

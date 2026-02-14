@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <script>
+    tailwind.config = { darkMode: 'class' }
+        </script>
+         <title>Compass Housing Template</title>
+    <style>
+      body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      margin: auto;
+      background-image: url("Images/transparent-logo-1.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 600px auto;
+      opacity: 0.10;
+      pointer-events: none;
+      z-index: -1;
+    }
+       section {
+    padding-top:50px !important;
+    padding-bottom:50px !important;
+  }
+  </style>
+</head>
+
+<body data-page="contact"
+      class="bg-white text-[#0D0F0E] dark:bg-[#0D0F0E] dark:text-white transition">
+
+  <!-- HEADER -->
+  <div id="site-header"></div>
+  <script src="header.js"></script>
+
+  <!-- SPACER -->
+  <div class="h-28"></div>
+
+  <!-- ========================================================= -->
+  <!-- HERO SECTION -->
+  <!-- ========================================================= -->
+  <section class="text-center container mx-auto px-6 md:px-12 lg:px-20 py-12">
+    <!-- <p class="text-[#00C29A] font-semibold text-sm mb-2">Get in touch</p> -->
+
+    <h1 class="text-4xl md:text-5xl font-bold mb-2">
+      Contact our support team
+    </h1>
+
+    <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+      Have a question about a property, pricing, or our services?  
+      We’re here to help 24/7 — reach out anytime.
+    </p>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- CONTACT INFO BOXES -->
+  <!-- ========================================================= -->
+  <section class="container mx-auto px-6 md:px-12 lg:px-20 pb-16">
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- PHONE -->
+      <div class="bg-white dark:bg-[#0A0A0A] shadow rounded-2xl p-8 text-center">
+        <div class="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-[#00C29A]/20 text-[#00C29A] text-xl mb-4">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <h3 class="font-bold text-lg">Phone</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">+1 800 245 1234</p>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="bg-white dark:bg-[#0A0A0A] shadow rounded-2xl p-8 text-center">
+        <div class="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-[#00C29A]/20 text-[#00C29A] text-xl mb-4">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <h3 class="font-bold text-lg">Email</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">support@futuristichaven.com</p>
+      </div>
+
+      <!-- LOCATION -->
+      <div class="bg-white dark:bg-[#0A0A0A] shadow rounded-2xl p-8 text-center">
+        <div class="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-[#00C29A]/20 text-[#00C29A] text-xl mb-4">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <h3 class="font-bold text-lg">Office</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Los Angeles, California</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- CONTACT FORM + MAP -->
+  <!-- ========================================================= -->
+  <section class="container mx-auto px-6 md:px-12 lg:px-20 pb-24 grid lg:grid-cols-2 gap-14">
+
+    <!-- FORM -->
+    <div class="bg-white dark:bg-[#0A0A0A] shadow-xl rounded-2xl p-8">
+
+      <h2 class="text-2xl font-bold mb-6">Send us a message</h2>
+
+      <form class="space-y-6">
+
+        <!-- NAME -->
+     <div>
+  <label class="text-sm font-medium">Full Name <span class="text-red-500">*</span></label>
+  <input id="fullName" type="text"
+    class="w-full mt-1 px-4 py-3 border rounded-lg bg-transparent border-gray-300 dark:border-gray-700" />
+  <p id="nameError" class="text-red-500 text-sm mt-1 hidden">
+    ⚠️ Name is required.
+  </p>
+</div>
+
+
+        <!-- EMAIL -->
+      <div>
+  <label class="text-sm font-medium">Email Address <span class="text-red-500">*</span></label>
+  <input id="email" type="email"
+    class="w-full mt-1 px-4 py-3 border rounded-lg bg-transparent border-gray-300 dark:border-gray-700" />
+  <p id="emailError" class="text-red-500 text-sm mt-1 hidden">
+    ⚠️ Email is required.
+  </p>
+</div>
+
+
+        <!-- MESSAGE -->
+        <div>
+  <label class="text-sm font-medium">Message <span class="text-red-500">*</span></label>
+  <textarea id="message" rows="5"
+    class="w-full mt-1 px-4 py-3 border rounded-lg bg-transparent border-gray-300 dark:border-gray-700"></textarea>
+  <p id="msgError" class="text-red-500 text-sm mt-1 hidden">
+    ⚠️ Message is required.
+  </p>
+</div>
+
+
+        <button type="submit"
+                class="w-full py-3 bg-[#00C29A] text-white rounded-lg font-semibold">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+
+    <!-- MAP -->
+    <div>
+      <div class="rounded-2xl overflow-hidden shadow-xl h-[400px]">
+        <iframe
+          class="w-full h-full"
+          loading="lazy"
+          allowfullscreen
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27408677415!2d-118.6919203489029!3d34.02016129240037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c0b0a31cb0af%3A0x5bdf4b77e1f7a196!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1234567890">
+        </iframe>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <div id="site-footer"></div>
+  <script src="footer.js"></script>
+<script>
+document.querySelectorAll("input, textarea").forEach(field => {
+  // Prevent typing space as first character
+  field.addEventListener("keydown", (e) => {
+    if (e.key === " " && field.value.length === 0) {
+      e.preventDefault();
+    }
+  });
+
+  // Remove leading spaces if user pastes
+  field.addEventListener("input", () => {
+    field.value = field.value.replace(/^\s+/, "");
+  });
+});
+</script>
+
+  <script>
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("form");
+
+    const fullName = document.getElementById("fullName");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const msgError = document.getElementById("msgError");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let valid = true;
+
+      // NAME
+      if (fullName.value.trim() === "") {
+        fullName.classList.add("border-red-500");
+        nameError.classList.remove("hidden");
+        valid = false;
+      } else {
+        fullName.classList.remove("border-red-500");
+        nameError.classList.add("hidden");
+      }
+
+      // EMAIL
+      if (email.value.trim() === "") {
+        email.classList.add("border-red-500");
+        emailError.textContent = "⚠️ Email is required.";
+        emailError.classList.remove("hidden");
+        valid = false;
+      } else {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net)$/;
+        if (!emailRegex.test(email.value.trim())) {
+          email.classList.add("border-red-500");
+          emailError.textContent = "⚠️ Enter a valid email.";
+          emailError.classList.remove("hidden");
+          valid = false;
+        } else {
+          email.classList.remove("border-red-500");
+          emailError.classList.add("hidden");
+        }
+      }
+
+      // MESSAGE
+      if (message.value.trim() === "") {
+        message.classList.add("border-red-500");
+        msgError.classList.remove("hidden");
+        valid = false;
+      } else {
+        message.classList.remove("border-red-500");
+        msgError.classList.add("hidden");
+      }
+
+      if (valid) {
+        alert("Message sent successfully!");
+        form.reset();
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>

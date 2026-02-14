@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: "class" };
+  </script>
+   <title>Compass Housing Template</title>
+    <style>
+      body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      margin: auto;
+      background-image: url("Images/transparent-logo-1.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 600px auto;
+      opacity: 0.10;
+      pointer-events: none;
+      z-index: -1;
+    }
+       section {
+    padding-top:50px !important;
+    padding-bottom:50px !important;
+  }
+  </style>
+</head>
+
+<body data-page="services-details"
+      class="bg-white text-[#0D0F0E] dark:bg-[#0D0F0E] dark:text-white transition">
+
+  <!-- HEADER -->
+  <div id="site-header"></div>
+  <script src="header.js"></script>
+
+  <!-- SPACING -->
+  <div class="h-28"></div>
+
+  <!-- ========================================================= -->
+  <!-- PAGE HEADER -->
+  <!-- ========================================================= -->
+ 
+  <section class="container mx-auto px-6 md:px-12 lg:px-20" style="padding-bottom: 5rem;">
+
+    <!-- <p class="text-[#00C29A] font-semibold text-sm flex items-center gap-2 mb-2">
+      <span class="w-2 h-2 bg-[#00C29A] rounded-full inline-block"></span>
+      Featured Property
+    </p>
+
+    <h1 class="text-3xl md:text-4xl font-bold">Modern Luxe Villa</h1>
+
+    <p class="text-gray-500 dark:text-gray-300 text-sm mt-1">
+      120 Beach Avenue, Malibu, USA
+    </p>
+
+    <div class="flex gap-8 mt-6 text-sm text-gray-600 dark:text-gray-300">
+      <div>5 Bedrooms</div>
+      <div>4 Bathrooms</div>
+      <div>5500 sq ft</div>
+    </div> -->
+   <div class="flex items-center flex-col">
+        <!-- <h1 class="text-[#00C29A] font-semibold text-3xl md:text-4xl flex items-center gap-2 mb-2"> -->
+      <!-- <span class="w-2 h-2 bg-[#00C29A] rounded-full inline-block"></span> -->
+      <!-- Featured Property
+        </h1> -->
+
+    <h2 class="text-3xl md:text-4xl font-bold">Modern Luxe Villa</h2>
+
+    <p class="text-gray-500 dark:text-gray-300 text-sm mt-1">
+      120 Beach Avenue, Malibu, USA
+    </p>
+
+    <!-- TOP STATS -->
+    <div class="flex gap-8 mt-6 text-sm text-gray-600 dark:text-gray-300">
+      <div>5 Bedrooms</div>
+      <div>4 Bathrooms</div>
+      <div>5500 sq ft</div>
+    </div>
+    </div>
+    <!-- MAIN GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10">
+
+      <!-- LEFT -->
+      <div class="lg:col-span-2">
+
+        <!-- MAIN IMAGE -->
+        <img 
+          src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&w=600&q=80"
+          class="rounded-xl w-full h-[420px] object-cover shadow"
+        />
+
+        <!-- DETAILS -->
+        <h2 class="mt-10 mb-4 font-semibold text-xl">Property Details</h2>
+
+        <div class="space-y-6">
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-[#00C29A]/10 flex items-center justify-center text-[#00C29A]">✓</div>
+            <div>
+              <h3 class="font-semibold">Poolside bliss</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-300">
+                A crystal-clear infinity pool overlooking the coastline.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-[#00C29A]/10 flex items-center justify-center text-[#00C29A]">✓</div>
+            <div>
+              <h3 class="font-semibold">Smart home access</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-300">
+                Fully automated home with AI/voice remote systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-[#00C29A]/10 flex items-center justify-center text-[#00C29A]">✓</div>
+            <div>
+              <h3 class="font-semibold">Energy efficiency</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-300">
+                Solar panels, insulated walls & eco-friendly airflow.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- DESCRIPTION -->
+        <!-- <p class="mt-8 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+          Nestled in the heart of Malibu, the modern luxe villa is a 5500 sq ft architectural
+          masterpiece designed for those who admire contemporary beauty and ocean-front tranquility.
+          Floor-to-ceiling glass walls illuminate the interiors, offering breathtaking views all day long.
+          <br><br>
+          The villa includes luxurious living spaces, an ocean deck, premium interiors, a private workspace,
+          and advanced smart-home technology built for the modern lifestyle.
+        </p> -->
+
+        <!-- WHAT PROPERTY OFFERS -->
+        <!-- <h2 class="mt-10 mb-4 font-semibold text-xl">What This Property Offers</h2> -->
+
+        <!-- <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+          <div class="flex items-center gap-2">✓ Smart home integration</div>
+          <div class="flex items-center gap-2">✓ Security cameras</div>
+          <div class="flex items-center gap-2">✓ Energy efficient</div>
+          <div class="flex items-center gap-2">✓ Ocean deck</div>
+          <div class="flex items-center gap-2">✓ Sauna suite</div>
+          <div class="flex items-center gap-2">✓ Private garage</div>
+          <div class="flex items-center gap-2">✓ Scenic views</div>
+          <div class="flex items-center gap-2">✓ Outdoor kitchen</div>
+        </div> -->
+
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <div class="space-y-8">
+
+        <!-- SMALL GALLERY -->
+        <div class="grid grid-cols-2 gap-4">
+          <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&w=600&q=80"
+               class="rounded-xl h-[120px] w-full object-cover" />
+          <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&w=600&q=80"
+               class="rounded-xl h-[120px] w-full object-cover" />
+          <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&w=600&q=80"
+               class="rounded-xl h-[120px] w-full object-cover" />
+          <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&w=600&q=80"
+               class="rounded-xl h-[120px] w-full object-cover" />
+        </div>
+
+        <!-- PRICE BOX -->
+        <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-6">
+          <h2 class="text-2xl font-bold">$1,650,500</h2>
+          <button onclick="window.location.href='contact.html'" class="mt-4 w-full py-3  bg-[#00C29A] text-white font-semibold rounded-lg">
+            Get in touch
+          </button>
+        </div>
+
+        <!-- AGENT BOX -->
+        <div class="bg-white dark:bg-[#0A0A0A] rounded-xl shadow p-6">
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Have questions? Our dedicated agents will guide you throughout your home-buying journey.
+          </p>
+
+          <div class="flex items-center gap-4 mt-5">
+            <img 
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&w=200&q=80"
+              class="w-12 h-12 rounded-full object-cover"
+            />
+            <div>
+              <h4 class="font-semibold">Emily & John Smith</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-300">Lead Realtors</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="site-footer"></div>
+  <script src="footer.js"></script>
+
+</body>
+</html>
