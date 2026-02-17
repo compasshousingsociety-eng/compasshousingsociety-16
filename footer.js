@@ -20,7 +20,7 @@ document.getElementById("site-footer").innerHTML = `
       <div class="flex bg-white rounded-full overflow-hidden max-w-sm">
         <input id="footerEmail" type="email" placeholder="Enter your email"
           class="px-4 py-2 w-full outline-none text-black">
-        <button id="footerSubscribeBtn" class="px-5 py-2 bg-[#4ADE80] text-black font-medium">
+        <button id="footerSubscribeBtn" class="px-5 py-2 bg-[#00C29A] hover:bg-[#009f7e] text-white font-medium transition">
           Subscribe
         </button>
       </div>
@@ -66,7 +66,7 @@ document.getElementById("site-footer").innerHTML = `
         Begin your path to<br>success—contact us today.
       </h2>
       <a href="contact.html">
-        <button class="px-6 py-2 rounded-full bg-[#4ADE80] text-black">
+        <button class="px-6 py-2 rounded-full bg-[#00C29A] hover:bg-[#009f7e] text-white transition">
           Get in touch
         </button>
       </a>

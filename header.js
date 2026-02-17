@@ -6,16 +6,16 @@
 const header = `
 <header class="w-full fixed top-0 left-0 z-50 bg-white dark:bg-[#0D0F0E] border-b border-gray-200 dark:border-gray-700">
 
-  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
 
     <!-- LOGO -->
-    <a href="index.html" class="flex items-center gap-2">
+    <a href="index.html" class="flex items-center gap-2 shrink-0">
       <img src="Images/transparent-logo-1.png" class="w-8 h-8" />
-      <span class="text-xl font-bold text-[#0D0F0E] dark:text-white">Compass Housing</span>
+      <span class="text-lg lg:text-xl font-bold text-[#0D0F0E] dark:text-white whitespace-nowrap">Compass Housing</span>
     </a>
 
     <!-- DESKTOP NAV -->
-    <nav class="hidden md:flex items-center gap-8 text-[#0D0F0E] dark:text-gray-200 font-medium">
+    <nav class="hidden md:flex items-center gap-6 text-[#0D0F0E] dark:text-gray-200 font-medium">
 
       <a href="index.html" class="hover:text-[#00C29A] nav-link" data-page="home">Home 1</a>
       <a href="home2.html" class="hover:text-[#00C29A] nav-link" data-page="home2">Home 2</a>
@@ -66,7 +66,7 @@ const header = `
     </nav>
 
     <!-- RIGHT BUTTONS (DESKTOP) --> 
-    <div class="hidden md:flex items-center gap-4 font-medium">
+    <div class="hidden md:flex items-center gap-3 font-medium shrink-0">
           <a href="signup.html" class="hover:text-[#00C29A] nav-link" data-page="signup">Sign Up</a>
       <a href="404.html" class="hover:text-[#00C29A] nav-link" data-page="notfound">Login</a>
 
