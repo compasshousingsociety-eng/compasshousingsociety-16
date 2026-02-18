@@ -118,7 +118,7 @@ document.getElementById("site-footer").innerHTML = `
   <!-- BOTTOM BAR -->
   <div class="container mx-auto px-4 mt-12 flex flex-col lg:flex-row justify-between text-xs opacity-70">
 
-    <p>© 2025 Compass Housing</p>
+    <p>© 2025Compass Housing Society</p>
 
     <div class="flex gap-6">
       <a href="comingsoon.html" class="hover:text-[#4ADE80]">Terms of Service</a>

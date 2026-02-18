@@ -11,7 +11,7 @@ const header = `
     <!-- LOGO -->
     <a href="index.html" class="flex items-center gap-2 shrink-0">
       <img src="Images/transparent-logo-1.png" class="w-8 h-8" />
-      <span class="text-lg lg:text-xl font-bold text-[#0D0F0E] dark:text-white whitespace-nowrap">Compass Housing</span>
+      <span class="text-lg lg:text-xl font-bold text-[#0D0F0E] dark:text-white whitespace-nowrap">Compass Housing Society</span>
     </a>
 
     <!-- DESKTOP NAV -->
