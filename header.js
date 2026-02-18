@@ -6,7 +6,7 @@
 const header = `
 <header class="w-full fixed top-0 left-0 z-50 bg-white dark:bg-[#0D0F0E] border-b border-gray-200 dark:border-gray-700">
 
-  <div class="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
+  <div class="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
 
     <!-- LOGO -->
     <a href="index.html" class="flex items-center gap-2 shrink-0">
@@ -15,20 +15,20 @@ const header = `
     </a>
 
     <!-- DESKTOP NAV -->
-    <nav class="hidden md:flex items-center gap-6 text-[#0D0F0E] dark:text-gray-200 font-medium">
+    <nav class="hidden md:flex items-center gap-5 text-[#0D0F0E] dark:text-gray-200 font-medium leading-none">
 
-      <a href="index.html" class="hover:text-[#00C29A] nav-link" data-page="home">Home 1</a>
-      <a href="home2.html" class="hover:text-[#00C29A] nav-link" data-page="home2">Home 2</a>
+      <a href="index.html" class="h-10 inline-flex items-center hover:text-[#00C29A] nav-link" data-page="home">Home 1</a>
+      <a href="home2.html" class="h-10 inline-flex items-center hover:text-[#00C29A] nav-link" data-page="home2">Home 2</a>
 
-          <a href="aboutus.html" class="hover:text-[#00C29A] nav-link" data-page="about">About Us</a>
+          <a href="aboutus.html" class="h-10 inline-flex items-center hover:text-[#00C29A] nav-link" data-page="about">About Us</a>
 
-          <a href="contact.html" class="block py-2 nav-link hover:text-[#00C29A]" data-page="contact">Contact Us</a>
+          <a href="contact.html" class="h-10 inline-flex items-center nav-link hover:text-[#00C29A]" data-page="contact">Contact Us</a>
 
 
       <!-- MORE DROPDOWN -->
     
          <div class="relative">
-            <button id="moreBtnServices" class="hover:text-[#00C29A] nav-link flex items-center gap-1">
+            <button id="moreBtnServices" class="h-10 hover:text-[#00C29A] nav-link inline-flex items-center gap-1">
               Services ▼
             </button>
 
@@ -40,7 +40,7 @@ const header = `
 
 
           <div class="relative">
-            <button id="moreBtnBlogs" class="hover:text-[#00C29A] nav-link flex items-center gap-1">
+            <button id="moreBtnBlogs" class="h-10 hover:text-[#00C29A] nav-link inline-flex items-center gap-1">
               Blogs ▼
             </button>
 
@@ -53,7 +53,7 @@ const header = `
 
 
           <div class="relative">
-            <button id="moreBtn" class=" hover:text-[#00C29A] nav-link flex items-center gap-1">
+            <button id="moreBtn" class="h-10 hover:text-[#00C29A] nav-link inline-flex items-center gap-1">
               More ▼
             </button>
 
@@ -67,8 +67,8 @@ const header = `
 
     <!-- RIGHT BUTTONS (DESKTOP) --> 
     <div class="hidden md:flex items-center gap-3 font-medium shrink-0">
-          <a href="signup.html" class="hover:text-[#00C29A] nav-link" data-page="signup">Sign Up</a>
-      <a href="404.html" class="hover:text-[#00C29A] nav-link" data-page="notfound">Login</a>
+          <a href="signup.html" class="h-10 inline-flex items-center hover:text-[#00C29A] nav-link" data-page="signup">Sign Up</a>
+      <a href="404.html" class="h-10 inline-flex items-center hover:text-[#00C29A] nav-link" data-page="notfound">Login</a>
 
       <!-- THEME ICON -->
       <button id="themeToggle" class="w-10 h-10 flex items-center justify-center rounded-full border">
